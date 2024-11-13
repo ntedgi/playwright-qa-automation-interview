@@ -1,0 +1,35 @@
+{
+  "name": "playwright-interview",
+  "version": "1.0.0",
+  "description": "Playwright QA Automation Interview",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write .",
+    "test": "playwright test",
+    "test:chromium": "playwright test --project=chromium",
+    "test:ci": "CI=true playwright test",
+    "test:debug": "playwright test --debug --project=chromium"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ntedgi/playwright-qa-automation-interview.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ntedgi/playwright-qa-automation-interview/issues"
+  },
+  "homepage": "https://github.com/ntedgi/playwright-qa-automation-interview#readme",
+  "devDependencies": {
+    "@axe-core/playwright": "^4.9.1",
+    "@playwright/test": "^1.46.0",
+    "@types/node": "^22.0.0",
+    "prettier": "^3.0.0",
+    "node-fetch": "2",
+    "playwright-tesults-reporter": "^1.1.0",
+    "lighthouse": "^11.3.0",
+    "find-free-ports": "^3.0.0",
+    "tesults": "^1.1.3"
+  }
+}
