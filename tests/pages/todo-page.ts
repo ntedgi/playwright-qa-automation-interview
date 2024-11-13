@@ -1,11 +1,18 @@
 // todoPage.js
-const { expect } = require('@playwright/test');
+import {Locator} from "@playwright/test";
+
+const {expect} = require('@playwright/test');
 
 class TodoPage {
+
+    todoList: Locator
+    item: any;
+
     constructor(page) {
         this.page = page;
         this.todoInput = page.locator('.todo-input'); // Adjusted selector for the todo input field
         this.todoList = page.locator('.todo-list'); // Selector for list items in the todo list
+        this.item = page.locator('.item'); // Selector for individual todo items
         this.clearCompletedButton = page.locator('.clear-completed'); // Button to clear completed todos
         this.undoButton = page.locator('button.undo'); // Adjust based on the actual undo button selector
     }
@@ -37,8 +44,9 @@ class TodoPage {
         await this.undoButton.click(); // Click the undo button
     }
 
+
     async assertTodoText(index, expectedText) {
-        await expect(this.todoList.nth(index)).toContainText(expectedText);
+        await expect(this.todoList.locator('.item').nth(index)).toContainText(expectedText)
     }
 
     async assertTodoCount(expectedCount) {
@@ -52,4 +60,4 @@ class TodoPage {
     }
 }
 
-module.exports = { TodoPage };
+module.exports = {TodoPage};

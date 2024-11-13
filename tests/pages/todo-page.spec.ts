@@ -8,7 +8,7 @@ test.describe('Todo App with Undo', () => {
         await todoPage.open();
     });
 
-    test('should add a new todo', async ({ page }) => {
+    test.only('should add a new todo', async ({ page }) => {
         const todoPage = new TodoPage(page);
         await todoPage.addTodo('Buy milk');
         await todoPage.assertTodoCount(1);
@@ -16,7 +16,7 @@ test.describe('Todo App with Undo', () => {
     });
 
 
-    test('should add 2 new todo', async ({ page }) => {
+    test.only('should add 2 new todo', async ({ page }) => {
         const todoPage = new TodoPage(page);
         await todoPage.addTodo('Buy milk');
         await todoPage.addTodo('Buy Soda');
