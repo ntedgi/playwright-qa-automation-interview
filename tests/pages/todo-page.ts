@@ -11,7 +11,7 @@ class TodoPage {
     }
 
     async open() {
-        await this.page.goto('http://localhost:3001');
+        await this.page.goto('http://localhost:3006');
         await this.todoInput.waitFor(); // Wait for the input field to ensure the page has loaded
     }
 

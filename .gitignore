@@ -1,3 +1,4 @@
+.idea*
 # Logs
 logs
 *.log
@@ -9,11 +10,11 @@ lerna-debug.log*
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
-test-results*
+test-results/*
+test-results
 playwright-report*
 playwright-report/index.html
 
-npm run test:chromium
 # Runtime data
 pids
 *.pid
