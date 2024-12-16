@@ -4,6 +4,14 @@ How To Run this Project:
 
 download this repository 
 
+
+* fork this project
+ https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo
+
+* submit a pr with your solutions 
+
+
+
 `git clone https://github.com/ntedgi/playwright-qa-automation-interview.git`
 
 this project as the playwright simple setup 
